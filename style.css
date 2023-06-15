@@ -1,0 +1,145 @@
+body {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1rem !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a,
+a:active,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+#main {
+  display: flex;
+}
+/* #region menu styles */
+#menu {
+  width: 10%;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #191718;
+  width: 100%;
+  height: 100%;
+}
+.navbar-sm {
+  display: none;
+}
+ul li {
+  color: #aaaaaa;
+  padding: 0.875rem 0 0.6875rem 1rem;
+  border-bottom: 1px solid #5c5c5c;
+  font-weight: 700;
+}
+ul li.home {
+  color: #ffffff;
+}
+ul li.active {
+  color: #ffffff;
+  background-color: #5c5c5c;
+}
+/* #endregion */
+/* page styles */
+#page {
+  width: 90%;
+}
+.page__main {
+  padding: 0 8rem;
+  text-align: center;
+}
+.page__header {
+  padding: 1.25rem 0 1.875rem 0;
+}
+.page__header img {
+  width: auto;
+}
+.page__content {
+  text-align: left;
+}
+.content__top {
+  background-color: #efefef;
+  padding: 2.375rem 12rem;
+  text-align: center;
+}
+.content__top h6 {
+  font-size: 1.125rem;
+  margin: 0 0 1.125rem 0;
+}
+.content__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+.content__layout {
+  padding-bottom: 11rem;
+  width: calc((100% - 100px) / 3);
+}
+.content__layout h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.125rem 0;
+}
+.content__image {
+  display: inline-flex;
+  float: left;
+  padding-right: 1rem;
+}
+.page__footer {
+  padding: 1.875rem 0 1.875rem 8rem;
+  border-top: 1px solid #dedede;
+}
+
+/* responsive */
+@media screen and (max-width: 992px) {
+  #menu {
+    width: 15%;
+  }
+  #page {
+    width: 85%;
+  }
+  .page__main {
+    padding: 0 4rem;
+  }
+  .content__top {
+    padding: 2.375rem 6rem;
+  }
+  .content__bottom {
+    flex-direction: column;
+  }
+  .content__layout {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #main {
+    flex-direction: column;
+  }
+  #menu,
+  #page {
+    width: 100%;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar-sm {
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 1rem;
+    text-align: center;
+    padding: 0.2rem;
+  }
+  img {
+    width: 50%;
+  }
+}
